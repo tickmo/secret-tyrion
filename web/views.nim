@@ -1,14 +1,10 @@
 import templates, layout, jester
 
-var screenshots = [1,2,3]
-
 proc index*(request: PRequest): string =
     tmpli html"""
         <div>
             <ul>
-                $for screnshot in screenshots {
-                   <li>$screnshot</li>
-                }
+                <li>screnshot</li>
             </ul>
         </div>
         """
