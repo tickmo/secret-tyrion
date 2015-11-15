@@ -3,7 +3,7 @@ import jester, templates
 import views
 
 routes:
-    get "/":    resp views.index(request)
-    post "/":    resp views.save(request)
+  get "/":    resp views.index(request)
+  post "/":    resp views.save(request)
 
 runForever()

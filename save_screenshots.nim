@@ -1,7 +1,9 @@
 import jester, future, asyncdispatch
 
 proc save(request: PRequest): string =
-    writeFile("filename.png", request.formData.mget("images[]").body)
+  var screenshots = request.formData["screenshots[]"]
+  writeFile(screenshots.fields["filename"], screenshots.body)
+  return ""
 
 routes:
   post "/": resp save(request)
